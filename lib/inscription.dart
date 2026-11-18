@@ -8,13 +8,16 @@ class Inscription extends StatefulWidget {
 }
 
 class _InscriptionState extends State<Inscription> {
+  final _formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(" Inscription"),
+        title: const Text("Inscription"),
       ),
       body: Form(
+        key: _formkey,
         child: Column(
           children: [
             TextFormField(
@@ -24,7 +27,7 @@ class _InscriptionState extends State<Inscription> {
                 hintText: 'Saisir votre email',
               ),
             ),
-            SizedBox(height:  20),
+            SizedBox(height: 20),
             TextFormField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -34,7 +37,7 @@ class _InscriptionState extends State<Inscription> {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text(" Inscription"),
+              child: Text("Inscription"),
             ),
           ],
         ),
