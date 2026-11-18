@@ -12,11 +12,33 @@ class _InscriptionState extends State<Inscription> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Inscription"),
+        title: const Text(" Inscription"),
       ),
-      body: Container(),
+      body: Form(
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Email',
+                hintText: 'Saisir votre email',
+              ),
+            ),
+            SizedBox(height:  20),
+            TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text(" Inscription"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
-
-
